@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>margin collapsing</title>
+	<style type="text/css">
+		html {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		} 
+		*, *::before, *::after {
+			box-sizing: inherit;
+			margin: inherit;
+			padding: inherit;
+		}
+		.container {
+			display: flex;
+		}
+		.container section:first-child {
+			margin-right: 60px;
+			background-color: #000045;
+			height: 100vh;
+			width: 60vw;
+		}
+		.container section:last-child {
+			margin-left: 30px;
+			background-color: #000050;
+			width: 40vw;
+			height: 100vh;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<section></section>
+		<section></section>
+	</div>
+</body>
+</html>

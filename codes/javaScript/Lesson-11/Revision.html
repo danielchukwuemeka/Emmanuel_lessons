@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="startCar">startCar</button>
+    <div id="">
+
+    </div>
+    <script>
+        //practicing using the if/else block
+        let score = 101;
+        if (score <= 100) {
+            if (score >= 70) {
+                console.log('Your grade is A');
+            } else if (score >= 60 && score < 70) {
+                console.log('Your Grade is B');
+            } else if (score >= 50 && score < 60) {
+                console.log('Your score is C');
+            } else if (score >= 40 && score < 50) {
+                console.log('Your grade is D');
+            } else if (score > 35 && score < 40) {
+                console.log('Your Grade is E');
+            }
+            else {
+                console.log('Sorry you are disqualified because you couldn\'t make an A')
+            }
+        } else {
+            console.log('You entered a wrong value')
+        }
+
+        // using loops inside an if/else statemnt 
+        let kilometer = 5;
+        let starter = document.getElementById('startCar');
+        console.log(starter)
+        if (starter.click()) {
+            for (let i = kilometer; i < 11; i++) {
+                kilometer = kilometer + 1;
+                console.log(kilometer);
+            }
+        }
+        // if (kilometer < 11)
+
+        let container = document.getElementById('container');
+
+        // let num = 0
+        // do {
+        //     console.log('my name is emma');
+        //     num += 1
+        // } while (num < 10);
+
+        for (let i = 0; i < 5; i++) {
+            console.log('my name is emma');
+        }
+    </script>
+</body>
+
+</html>

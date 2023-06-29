@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>direct-child-combinator</title>
+	<style type="text/css">
+		body>div.container div.content div>p>a {
+			text-transform: uppercase;
+			font-style: italic;
+			color: blue;
+			background-color: yellow;
+		}
+
+		div > a  {
+    		color: brown;
+    		background-color: lightblue;
+    		text-decoration: underline;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="content">
+			<div>
+			    <a href="#">I am a link</a>
+			    <a href="#">I am a link</a>
+			    <p><a href="#">I am a link inside a paragraph</a></p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

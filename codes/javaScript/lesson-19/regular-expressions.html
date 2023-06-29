@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Syntax 1: /\b.../ where .... represents a word.
+        // Search for a word that begins with the pattern ward
+        const regexPattern1 = /\Bward/gi;
+        const text1 = 'backward Wardrobe Ward drededwardcome';
+        console.log(text1.match(regexPattern1)); // Output: ['Ward', 'Ward']
+
+
+        //using the match string method 
+        const name = 'Emmanuel';
+        const regEx1 = /nu/i;
+        console.log(name.match(regEx1));
+
+        const word = 'colour';
+        const regEx2 = /ur/;
+        console.log(word.replace('ou', 'o'));
+
+        // using the search string method in regex
+        const searchWord = 'abakaliki';
+        const regex3 = /lik/;
+        console.log(searchWord.split(regex3))
+    </script>
+</body>
+
+</html>

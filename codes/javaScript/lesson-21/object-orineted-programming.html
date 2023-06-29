@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oop</title>
+</head>
+
+<body>
+    <script>
+        //using  a constructor function 
+        function Student(name, age, level) {
+            this.name = name;
+            this.age = age;
+            this.level = level;
+
+            this.printName = function () {
+                console.log('your name is ' + name);
+            }
+        }
+
+        Array.prototype.sumAllarrayElements = function () {
+            let total = 0;
+            for (let i = 0; i < this.length; i++) {
+                total += this[i];
+            }
+            console.log(`the total of all the elements in the array is ${total}`);
+        }
+
+        let salaries = [
+            20000,
+            30000,
+            45000,
+            50000,
+        ]
+
+        salaries.sumAllarrayElements();
+
+        let ages = [29, 20, 30, 50, 60, 21];
+        ages.sumAllarrayElements();
+
+        //usng the es6 constructor classes
+        class User {
+            constructor(name) {
+                this.name = name;
+            }
+
+            printName() {
+                console.log(this.name);
+            }
+        }
+
+        const kedar = new User("kedar").printName();
+        console.log(new User('emma'));
+
+    </script>
+</body>
+
+</html>

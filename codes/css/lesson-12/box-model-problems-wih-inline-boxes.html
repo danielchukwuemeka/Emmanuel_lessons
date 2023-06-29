@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>box model problem</title>
+	<style type="text/css">
+
+		span {
+		  margin: 20px;
+		  padding: 20px;
+		  width: 80px;
+		  height: 50px;
+		  background-color: lightblue;
+		  border: 2px solid blue;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<!-- HTML -->
+		<p>
+		    I am a paragraph and this is a <span>span</span> inside that paragraph. A span is an inline element and so does not respect width and height.
+		</p>     
+	</div>
+</body>
+</html>

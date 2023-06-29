@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // const multiply = (a, b) => a * b
+
+        // const square = n => multiply(n, n)
+
+        // const printSquare = n => console.log(square(n))
+
+        // printSquare(4);
+
+        // console.log('task1');
+
+        // setTimeout(() => console.log('task2'), 0);
+
+        // console.log('task3');
+
+        // const callbackFunction = console.log("i am a callback");
+        // const higherOrderFunctions = callback => callback();
+        // higherOrderFunctions(callbackFunction);
+
+        // let numbers = [1, 2, 3, 4];
+        // let mappedArray = numbers.map((element) => element * 2);
+        // console.log(mappedArray);
+        // console.log(mappedArray.pop());
+        // console.log(numbers);
+
+        // const arr = [1, 2, 3]
+
+        // arr.map(e => setTimeout(() => console.log('async item', e), 0)) // This is an asynchronous callback
+        // console.log('the stuff')
+
+
+        // console.log('logging...')
+        // arr.map((e) => console.log('sync item', e)) // This is a synchronous callback
+
+        const fetchJokeWithPromises = () => {
+            console.log('fetching with promises...')
+
+            fetch('https://api.chucknorris.io/jokes/random')
+                .then((response) => response.json())
+                .then((response) => console.log('res', response))
+                .catch((error) => console.error('There was an error!', error))
+        }
+        fetchJokeWithPromises();
+
+        // using async/await 
+
+        const fetchJokeWithAsyncAwait = async () => {
+            try {
+                const res = await fetch('https://api.chucknorris.io/jokes/random')
+                const data = await res.json()
+                console.log('async-await data', data)
+            } catch (error) {
+                console.error('There was an error!', error)
+            }
+        }
+
+        fetchJokeWithAsyncAwait();
+    </script>
+</body>
+
+</html>

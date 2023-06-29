@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // creating a loop inside of a loop 
+
+        let names = [
+            ['chisom', 'daniel', 'adeze', 'chinonso', 'emmanuel'],
+            ['juli', 'henry', 'odunze', 'amaka', 'chidera'],
+            ['paul', 'peter', 'simon', 'stephen', 'victor'],
+            ['melody', 'cynthia', 'ifee', 'godwin', 'mary'],
+            ['chelsea', 'rashford', 'anthony', 'faith', 'anna']
+        ];
+
+        // for(let i=0; i < 5; i++) {
+        //     for(let j = 0; j < 5; j++){
+        //         console.log(` ${names[i][j]} \n`);
+        //     }
+        // }
+
+        //passing functions as parameters 
+        function adder(x, y) {
+            return x + y;
+        }
+
+        function subtractor(x, y) {
+            return x - y;
+        }
+
+        function divisor(x, y) {
+            return x / y;
+        }
+
+        function addingTwoValues(p,q,adder) {
+            let result = adder(p,q);
+            console.log(result);
+        }
+
+        addingTwoValues(2,4,divisor);
+    </script>
+</body>
+</html>

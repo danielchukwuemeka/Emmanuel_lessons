@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>pseudo-class-selectors-for-positon</title>
+	<style type="text/css">
+		div.content div.list-container {
+			margin: auto auto;
+			height: fit-content;
+			width: 200px;
+			background-color: yellow;
+		}
+
+/*		using the first-child pseudo-class selector*/
+		ul.unorderd-list li:first-child {
+			color: red;
+			text-transform: uppercase;
+		}
+
+/*		using the last-child pseudo-class selector*/
+		ul.unorderd-list li:last-child {
+			color: blue;
+			text-transform: uppercase;
+		}		
+
+/*		using the nth-child() pseudo-class selector*/
+		ul.unorderd-list li:nth-child(2) {
+			color: white;
+			text-transform: uppercase;
+		}
+
+		ul.unorderd-list li:nth-child(even) {
+			color: brown;
+			text-transform: uppercase;
+		}
+
+		ul.unorderd-list li:nth-child(odd) {
+			color: deeppink;
+			text-transform: uppercase;
+		}
+
+/*		using first-of-type pseudo-class selector */
+		div.container>div.content>p:first-of-type {
+			color: red;
+			text-decoration: underline;
+		}
+
+/*		using last-of-type pseudo-class selector*/
+		div.container>div.content>p:last-of-type {
+			color: purple;
+			text-decoration: underline;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="content">
+			<div class="list-container">
+				<ul class="unorderd-list">
+					<li class="list">English</li>
+					<li class="list">Chemistry</li>
+					<li class="list">Maths</li>
+					<li class="list">Biology</li>
+					<li class="list">Agriculture</li>
+					<li class="list">Home economics</li>
+				</ul>
+			</div>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+			<div>
+				<a href="#0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</a>
+			</div>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+	</div>
+</body>
+</html>

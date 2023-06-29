@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let emma = {
+        //     f_name: 'Emmanuel',
+        //     l_name: 'Ikechukwu',
+        //     age: 23,
+        //     level: 100,
+        //     course: 'Computer Science',
+        //     writeMyName: function () {
+        //         console.log(`My name is ${emma.f_name} ${emma.l_name}`);
+        //     },
+
+        //     updateName: function (fname, lname) {
+        //         this.f_name = fname;
+        //         this.l_name = lname;
+        //     },
+
+        //     aboutEmma: function () {
+        //         console.log(`My name is ${this.f_name} ${this.l_name} i am  ${this.age} years old. I am in ${this.level}level and I am studying ${this.course}.`)
+        //     },
+
+        //     updateLevel: function (newLevel) {
+        //         this.level = newLevel;
+        //     },
+
+        //     onBirthday: function () {
+        //         this.age += 1;
+        //     }
+        // }
+        // console.log('Before changing the name');
+        // emma.writeMyName();
+        // emma.updateName('Melody', 'obi');
+        // console.log('After changing the name');
+        // emma.writeMyName();
+
+        // //updating emma's age 
+        // emma.onBirthday();
+        // emma.aboutEmma();
+
+        // let footballClub = {
+        //     players: ['Rashford', 'Neymar', 'Haaland', 'Benzema', 'kane'],
+        //     contracts: {
+        //         manchesterUnited: 'Rashford',
+        //         psg: 'Neymar',
+        //         manchesterCity: 'Haaland',
+        //         realMadrid: 'Benzema',
+        //         totenhamHotspur: 'kane',
+        //         printContracts: function () {
+        //             console.log(footballClub.contracts);
+        //         }
+        //     }
+        // }
+
+        // console.log(footballClub.players[3]);
+        // console.log(footballClub.contracts.manchesterUnited);
+        // footballClub.contracts.printContracts();
+        // console.log(footballClub);
+
+        let emmasWife = {
+            f_name: 'Melody',
+            l_name: 'Ikechukwu',
+            age: 20,
+            gender: 'female',
+            cook: function (food, type, condiment, transport) {
+                console.log(`I am preparing ${type} ${food} with ${condiment} and you will wash it down with ${transport}.`)
+            }
+        };
+
+        console.log('Before adding the extra properties and methods');
+        console.log(emmasWife);
+
+        emmasWife.clean = function (place) {
+            console.log(`Dont't worry I will be cleaning the ${place} later`);
+        }
+
+        emmasWife.height = 5.6;
+        emmasWife.skinColor = 'dark';
+
+        console.log('after adding the extra properties and methods');
+        console.log(emmasWife);
+
+        console.log(emmasWife['l_name']);
+
+        let myName = prompt('Enter your name');
+        console.log(myName);
+
+    </script>
+</body>
+
+</html>

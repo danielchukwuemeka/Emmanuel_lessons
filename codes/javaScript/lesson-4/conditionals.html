@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let userName = "emmma";
+        let password = 1234;
+        // if(userName === "emma" && password === 1234) {
+        //     alert('Hurray! you are logged in');
+        // } else {
+        //     alert('sorry you have a wrong password');
+        // } 
+
+        userName === "emma" && password === 1234 ? alert("hurray! you are logged in") : console.log('sorry you have a wrong password');
+
+        // alert(getDate);
+        let daysOfTheWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        console.log(`Today is ${daysOfTheWeek[new Date().getDay()]}`);
+        
+        //using conditionals to set today
+        let getDate = new Date();
+        let today = getDate.getDay();
+        if(today == 0) {
+            cosole.log('Sunday');
+        } else if(today == 1) {
+            console.log('Monday');
+        } else if(today == 2) {
+            console.log('Tuesday');
+        }else if(today == 3) {
+            console.log('Wednesday');
+        } else if(today == 4) {
+            console.log('Thursday');
+        }else if(today == 5) {
+            console.log('Friday');
+        }else if(today == 6) {
+            console.log('Saturday');
+        }
+
+        switch(today) {
+            case 0: 
+                console.log("Sunday");
+            // break;
+            case 1: 
+                console.log("Monday");
+            // break;
+            case 2: 
+                console.log("Tuesday");
+            // break;
+            case 3: 
+                console.log("Wednesday");
+            // break;
+            case 4: 
+                console.log("Thursday");
+            break;
+            case 5: 
+                console.log("Friday");
+            // break;
+            case 6: 
+                console.log("Saturday");
+            // break;
+            default: 
+                console.log('error');
+            }
+    </script>
+</body>
+</html>

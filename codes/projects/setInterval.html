@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #start {
+            background-color: green;
+        }
+
+        #Stop {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body id="body">
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <script>
+        let backgrounds = [
+            'red',
+            'orange',
+            'yellow',
+            'green',
+            'blue',
+            'indigo',
+            'violent',
+            'cyan',
+        ]
+
+        let i = 0;
+        let intervalId;
+        function startInterval() {
+            intervalId = setInterval(() => {
+                if (i < backgrounds.length) {
+                    document.getElementById('body').style.backgroundColor = backgrounds[i];
+                    i++;
+                } else if (i >= backgrounds.length) {
+                    i = 0;
+                };
+            }, 100);
+        }
+
+        function stopInterval() {
+            clearInterval(intervalId);
+        }
+
+        document.querySelector('#start').addEventListener('click', startInterval);
+        document.querySelector('#stop').addEventListener('click', stopInterval);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>justify content</title>
+	<style type="text/css">
+		html, *, *::before, *::after {
+			padding: 0;
+			margin: 0;
+		}
+		div.container {
+			background-image: linear-gradient(95deg, green 10% , orange 50%);
+			height: 100vh;
+		}
+		div.contents {
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-evenly;
+			height: 300px;
+			align-items: baseline;
+		}
+
+		div.contents>div {
+/*			height: 100px;*/
+			width: 100px;
+			margin: 0 2px;
+			border: 1px solid #000;
+			text-align: center;
+			font-size: 100px;
+			font-weight: 900;
+		}
+		div.red {
+			background-color: red;
+		}		
+
+		div.orange {
+			background-color: orange;			
+		}		
+
+		div.yellow {	
+			background-color: yellow;		
+		}		
+
+		div.green {
+			background-color: green;
+		}		
+
+		div.blue {	
+			background-color: blue;		
+		}		
+
+		div.indigo {
+			background-color: indigo;		
+		}		
+
+		div.violent {		
+			background-color: violet;		
+		}
+
+		div.cyan {
+			background-color: cyan;
+		}		
+
+		div.azure {
+			background-color: azure;
+		}		
+
+		div.purple {
+			background-color: purple;
+		}		
+
+		div.antiquewhite {
+			background-color: antiquewhite;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="contents">
+			<div class="red">1</div>
+			<div class="orange">2</div>
+			<div class="yellow">3</div>
+			<div class="green">4</div>
+			<div class="blue">5</div>
+		</div>
+	</div>
+</body>
+</html>

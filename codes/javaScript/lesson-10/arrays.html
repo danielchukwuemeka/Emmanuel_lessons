@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="">
+        <div>
+            <label for="username">Username</label>
+            <input type="text" id="username">
+        </div>
+        <div>
+            <label for="username">password</label>
+            <input type="text" id="password">
+        </div>
+
+        <button type="button" onclick="confirmUser()" id="submitButton">
+            login
+        </button>
+    </form>
+
+    <p id="user-input"></p>
+
+    <div class="main">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <script>
+        // let personalInfor = [
+        //     'Emmanuel',
+        //     20,
+        //     false,
+        //     100000.53,
+        //     null,
+        //     {
+        //         location: 'ebonyi state',
+        //         school: 'funai'
+        //     }
+        // ]
+
+        // console.log(personalInfor);
+
+        // let salad = new Array(5, 2);
+        // let fruitSalad = [5];
+        // console.log(fruitSalad);
+        // console.log(salad);
+
+        // //acessing array elements seperately
+        // let soups = ['Egusi', 'BitterLeaf', 'Vegetable', 'Ora', 'Okro', 'Ogbono', 'Groundnut', 'Esisa', 'Banga', 'Afang', 'Nsala', 'Akparata', 'Achi', 'Ewedu'];
+
+        // // console.log(soups[0]);
+        // // console.log(soups[2]);
+        // // console.log(soups[5]);
+        // // console.log(soups[9]);
+        // // console.log(soups[13]);
+
+        // for (let i = 0; i < soups.length; i += 3) {
+        //     console.log(soups[i]);
+        // }
+
+        // console.log('this is the length of the array before adding elements' + soups.length);
+
+        // soups.push('Okobo', 'Beans-soup');
+
+        // console.log('this is the length of the array after adding elements' + soups.length);
+
+        // soups.unshift('Abuba', 'ofe-owere');
+        // console.log(soups);
+
+
+        // //using the pop array method
+        // soups.pop();
+        // console.log(soups);
+
+        // //using the shift array method
+        // soups.shift();
+        // console.log(soups);
+
+        // //using the slice array method
+        // let soupsCopy = soups.slice();
+        // console.log(soupsCopy);
+
+        // //using the isArray method
+        // console.log(Array.isArray(soups));
+
+        // // disrupting arrays
+        // let [emma, daniel, somto] = [18, 28, 28];
+        // console.log(emma);
+
+        // //disrupting arrays continuation
+        // let names = ['emma', 'cynthia', 'jessica', 'daniel', 'simon'];
+        // let emmanuel = names[0];
+        // let cynthia = names[1];
+        // let jessica = names[2];
+        // let dan = names[3];
+        // let simon = names[4];
+
+        // console.log(jessica);
+
+        // //asigning a default value to varriables when disrtructing and array
+        // let [chioma, anna, mary = 18] = [19, 20, 22];
+        // console.log(mary);
+
+        // let chika = 20;
+        // chika = 22;
+        // console.log(chika);
+
+        // let [chikamso, , mmesoma = 18] = [19, 20, 22];
+        // console.log(chikamso + " " + mmesoma);
+
+        // let fruits = [
+        //     'mango',
+        //     'guava',
+        //     'pawpaw',
+        //     'orange',
+        //     [
+        //         'bannana',
+        //         'coconut',
+        //         'pineapple',
+        //         'watermellon'
+        //     ]
+        // ];
+
+        // console.log(fruits[2]);
+        // console.log(fruits[4][2]);
+
+        // let [
+        //     mango,
+        //     guava,
+        //     pawpaw,
+        //     orange,
+        //     [
+        //         bannana,
+        //         coconut,
+        //         pineapple,
+        //         watermellon
+        //     ]
+        // ] = [
+        //         'mango',
+        //         'guava',
+        //         'pawpaw',
+        //         'orange',
+        //         [
+        //             'bannana',
+        //             'coconut',
+        //             'pineapple',
+        //             'watermellon'
+        //         ]
+        //     ];
+        // console.log(pineapple);
+
+        // let [cook, cleaner, ...developer] = ['cook', 'cleaner', ['frontend', 'backend', 'fullstack', 'mobileapp']];
+        // console.log(cook)
+        // console.log(cleaner)
+        // console.log(developer)
+
+        // //use cases of array distructiong ie swapping values
+        // let firstSmile = "🙂";
+        // let secondFrown = "😔";
+        // console.log(`Before swaping them we have first smile to be ${firstSmile} and the second frown to be ${secondFrown}.`);
+        // [firstSmile, secondFrown] = [secondFrown, firstSmile];
+        // console.log(`after swaping them we have first smile to be ${firstSmile} and the second frown to be ${secondFrown}.`);
+
+        // //using the spread operator to merge arays
+        // let emotions = ['anger', 'sad', 'happy', 'envy', 'depressed'];
+        // let Vegetable = ['waterleaf', 'okro', 'oninons', 'pumkin', 'bitterleaf'];
+        // let VegetableEmotions = [...emotions, ...Vegetable];
+        // console.log(VegetableEmotions);
+        // let vege = VegetableEmotions.slice(5);
+        // console.log(vege);
+
+
+        // let vegeEmo = emotions.concat(Vegetable);
+        // console.log(vegeEmo);
+
+        // let first = [1, 2, 3];
+        // let second = [4, 5, 6];
+        // let third = [7, 8, 9];
+        // let joinedArray = first.concat(second, third);
+        // console.log(joinedArray);
+
+        // //using the join arrray method
+        // let joinedFirst = first.join(' ~~~> ');
+        // console.log(joinedFirst);
+        // console.log(typeof (joinedFirst));
+        // console.log(typeof (first));
+
+        // //using the fill() aray methods
+        // let carsBrands = ['Toyota', 'jeep', 'ford', 'ferari', 'bugarti', 'lambourgini', 'astornmatin', 'audi', 'volvo', 'peugot', 'tesla', 'lexus'];
+
+        // console.log(carsBrands);
+
+        // let arrayOfMercedes = carsBrands.fill('mercedes', 5, 8);
+        // console.log(arrayOfMercedes);
+
+        //using the includes array method
+        let users = [
+            {
+                usernName: 'emma',
+                password: 'password1'
+            },
+            {
+                usernName: 'daniel',
+                password: 'password2'
+            },
+            {
+                usernName: 'cynthia',
+                password: 'password3'
+            },
+            {
+                usernName: 'chidi',
+                password: 'password3'
+            },
+            {
+                usernName: 'willson',
+                password: 'password4'
+            }
+        ];
+
+        let registeredUser = false;
+
+        // let users = ['emma', 'daniel', 'chidi', 'cynthia', 'goodluck'];
+        // let passwords = ['password1', 'password2', 'password3', 'password4', 'password5'];
+
+        function confirmUser() {
+            let username = document.getElementById('username').value;
+            let password = document.getElementById('password').value;
+            console.log(username, password)
+            for (let i = 0; i < users.length; i++) {
+                if (users[i].usernName === username && users[i].password === password) {
+                    registeredUser = true;
+                }
+            }
+
+            if (registeredUser === true) {
+                // alert(`Welcome ${username}!`);
+                // window.location.href = "http://www.w3schools.com";
+                document.querySelector('#user-input').innerHTML = 'Welcome ' + username;
+            } else {
+                // alert('Wrong username or password');
+                document.querySelector('#user-input').innerHTML = 'Wrong password or username';
+            }
+            // if (users.includes(username) && passwords.includes(password)) {
+            //     alert(`Welcome ${username}!`);
+            // } else {
+            //     alert(`Wrong username or Password`);
+            // }
+            // let bool = users.includes({ usernName: 'emma', password: 'password1' });
+            // console.log(bool);
+            // console.log(response)
+        }
+
+        // confirmUser();
+
+        // // let submitButton = document.getElementById('submitButton').onclick(confirmUser);
+        // console.log(submitButton);
+
+        // using the array reverse method 
+        let position = ['first', 'second', 'third'];
+        let reversedPosition = position.reverse();
+        console.log(reversedPosition);
+
+        // using the splice array method 
+        let guns = ['short gun', 'Ak 4k', 'vector', 'pistol', 'gock'];
+        let splicedGuns = guns.splice(2, 1);
+        console.log(splicedGuns);
+        let slicedguns = guns.slice(1, 3);
+        console.log(slicedguns);
+        console.log(guns);
+
+        // removing and adding elements using the splice method
+        let updatedGuns = guns.splice(2, 0, 'Barret');
+        console.log(guns);
+
+
+        let listItems = document.getElementsByTagName("li");
+        console.log(listItems);
+        let arrayOfListItems = Array.from(listItems);
+        console.log(arrayOfListItems);
+
+        let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 19];
+        // numbers.forEach(() => numbers * 2);
+        console.log(numbers.forEach((numbers) => numbers * 2));
+
+
+        // making use of the Array.of() methods 
+        let collection = Array.of(true, 'false', ['mary', 'amaka', { name: 'chison', age: 20 }]);
+        console.log(collection);
+
+
+        let workers = [
+            {
+                'id': 001,
+                'f_name': 'Emmanuel',
+                'last_name': 'ikechukwu',
+                'gender': 'male',
+                'age': 17,
+                'married': false,
+                'salary': 200000,
+                'duties': ['fontend', 'backend', 'design']
+            },
+            {
+                'id': 002,
+                'f_name': 'Daniel',
+                'last_name': 'mmaduabuchi',
+                'gender': 'male',
+                'age': 25,
+                'married': true,
+                'salary': 2000000,
+                'duties': ['Mobile', 'Trader', 'design']
+            },
+            {
+                'id': 003,
+                'f_name': 'chisom',
+                'last_name': 'ikechukwu',
+                'gender': 'male',
+                'age': 20,
+                'married': true,
+                'salary': 20000,
+                'duties': ['driver', 'cleaner', 'mechanic']
+            },
+            {
+                'id': 004,
+                'f_name': 'Melody',
+                'last_name': 'obi',
+                'gender': 'female',
+                'age': 22,
+                'married': false,
+                'salary': 100000,
+                'duties': ['UI/UX', 'Marketer', 'Product Manager']
+            }
+        ];
+
+        let femaleWorkers = workers.filter((element, index) => {
+            return element.gender === 'female';
+        });
+        console.log(femaleWorkers);
+
+        // let workersAge = workers.map((element, index) => {
+        //     return `${element.f_name} ${element.last_name} is ${element.age} years old `
+        // });
+        // console.log(workersAge);
+
+        //return workers age as objects
+        let workersAgeAsObjects = workers.map((element, index) => {
+            return {
+                'Worker': `${element['last_name']} ${element.f_name} is ${element.age} years old`
+            }
+        });
+        console.log(workersAgeAsObjects);
+
+        //total payouts to the workers by the company
+        let totalPayouts = workers.reduce((totalPayouts, worker, index, array) => {
+            totalPayouts = totalPayouts + Number(worker.salary);
+            return totalPayouts;
+        }, 0);
+        console.log(totalPayouts);
+        console.log(typeof (totalPayouts));
+
+        // let salary1 = 2000;
+        // let salary2 = Number('2000');
+        // let totalSalary = salary1 + salary2;
+        // console.log(typeof (totalSalary));
+        // console.log(totalSalary);
+        // console.log(salary1 === salary2);
+
+        //checking if any of our workers is below the age of 20 using the some array method
+        let below20 = workers.some((worker, index) => {
+            return worker.age < 20;
+        });
+        console.log(below20);
+
+        //using the find array method
+        let uder20 = workers.find((worker, index) => {
+            return worker.age < 20;
+        });
+        console.log(uder20.f_name + uder20.last_name);
+
+        //using the findindex arraymethod
+        let victim = workers.findIndex((worker, index) => worker.age > 22);
+        console.log(victim);
+
+        //using every aray method
+        let roles = workers.every((worker, index) => worker.duties.length >= 4);
+        console.log(roles);
+
+        //usign the at method
+        let worker3 = workers.at(2);
+        console.log(worker3)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Example</title>
+        <style>
+            nav {
+                display: flex;
+                justify-content: center;
+                padding: 30px;
+            }
+
+            nav li {
+                list-style: none;
+                padding: 5px;
+            }
+
+            nav li a {
+                text-decoration: none;
+                padding: 20px;
+            }
+        </style>
+
+    <body>
+
+        <div id="nav-container">
+            <nav id="nav">
+                <li id="home"><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li id="contact"><a href="#">Contact</a></li>
+            </nav>
+        </div>
+        <script>
+            const navbar = document.querySelector("nav");
+            navbar.addEventListener('click', function () {
+                navbar.style.backgroundColor = "green"
+            });
+            const anchor = document.querySelector("a");
+            anchor.addEventListener("click", function (element) {
+                element.stopPropagation();
+                anchor.style.backgroundColor = "pink";
+            });
+
+            let home = document.querySelector('#home');
+            console.log(home.parentElement);
+
+            let contact = document.querySelector('#contact');
+            console.log(contact.closest('#nav-container').childNodes);
+            console.log(home.nextElementSibling);
+
+        </script>
+    </body>
+
+    </html>
+
+    </head>
+
+</body>
+
+</html>

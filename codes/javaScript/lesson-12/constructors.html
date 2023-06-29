@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Student(f_name, l_name, level, yearOfAddmission, course, gender, regNumber) {
+            this.f_name = f_name;
+            this.l_name = l_name;
+            this.level = level;
+            this.yearOfAddmission = yearOfAddmission;
+            this.course = course;
+            this.gender = gender;
+            this.regNumber = regNumber;
+
+            Student.prototype.getName = function () {
+                console.log(`The student's name is ${this.f_name} ${this.l_name}`);
+            }
+
+            Student.prototype.updateName = function (newF_name, newL_name) {
+                this.f_name = newF_name;
+                this.l_name = newL_name;
+                console.log(`Your name has been chaged to ${this.f_name} ${this.l_name}`)
+            }
+
+            Student.prototype.changeOfCourse = function (newCourse) {
+                this.course = newCourse;
+            }
+        }
+
+        let Emmanuel = new Student('Emmanuel', 'Ikechukwu', 100, '2023/2024', 'computer science', 'male', 'u23/nas/csc/2234');
+        // console.log(Emmanuel);
+        // Emmanuel.updateName('Daniel', 'Ikechukwu');
+        // console.log(Emmanuel);
+
+        let Chigozie = new Student('Emmanuel', 'Ikechukwu', 100, '2023/2024', 'computer science', 'male', 'u23/nas/csc/2234');
+
+        let cynthia = new Student('Cynthia', 'Ogbuewu', 200, '2022/2023', 'Public Administration', 'female', 'u22/mss/pub/11442');
+
+        let Micheal = Emmanuel
+        let Michealangelo = { ...Emmanuel };
+
+        Micheal.f_name = 'micheal';
+        Emmanuel.f_name = 'Emmanuella'
+
+        console.log(`Emmanuel compared to micheal is ${Emmanuel === Micheal}`);
+        console.log(`Emmanuel compared to chigozie is ${Emmanuel === Chigozie}`);
+        console.log(`Emmanuel compared to cynthia is ${Emmanuel === cynthia}`);
+        console.log(`Chigozie compared to cynthia is ${Chigozie === cynthia}`);
+        console.log(Emmanuel.f_name);
+        console.log(Michealangelo.f_name);
+
+
+        //using the object.assign() method
+        let newStudent = Object.assign({}, cynthia);
+        cynthia.l_name = 'De la posh';
+        console.log(newStudent);
+    </script>
+</body>
+
+</html>

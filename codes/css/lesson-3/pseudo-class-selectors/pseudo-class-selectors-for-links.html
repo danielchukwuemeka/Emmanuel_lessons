@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>pseudo-class selectors</title>
+	<style type="text/css">
+		a:link {
+			color:  yellowgreen;
+			text-transform: lowercase;
+		}
+
+		a:visited {
+			color: pink;
+			text-transform: uppercase;
+		}
+
+		a:hover {
+			cursor: pointer;
+			text-decoration: underline;
+			color: red;
+		}
+
+		a:focus {
+			background-color: lightblue;
+			color: darkred;
+			display: block;
+			text-align: right;
+		}
+
+		a:active {
+			cursor: progress;
+			color: orange;
+			text-transform: uppercase;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="content">
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				<a href="https://github.com" target="blank">proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</a>
+
+				<a href="https://freecodecamp.com">visit free codecamp</a>
+			</p>
+		</div>
+	</div>
+</body>
+</html>

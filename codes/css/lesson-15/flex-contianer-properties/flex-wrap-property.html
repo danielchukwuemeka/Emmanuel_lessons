@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>z-index values</title>
+	<style type="text/css">
+		div.contents {
+			display: flex;
+/*			flex-direction: row;*/
+/*			flex-wrap: wrap;*/
+/*			flex-wrap: wrap-reverse;*/
+			flex-flow: row wrap-reverse;
+		}
+
+		div.contents-2 {
+			display: flex;
+			flex-direction: column;
+		}
+
+		div.contents>div,
+		div.contents-2>div {
+			height: 200px;
+			width: 200px;
+			margin: 0 2px;
+			border: 1px solid #000;
+			text-align: center;
+			font-size: 100px;
+			font-weight: 900;
+		}
+		div.red {
+			background-color: red;
+		}		
+
+		div.orange {
+			background-color: orange;			
+		}		
+
+		div.yellow {	
+			background-color: yellow;		
+		}		
+
+		div.green {
+			background-color: green;
+		}		
+
+		div.blue {	
+			background-color: blue;		
+		}		
+
+		div.indigo {
+			background-color: indigo;		
+		}		
+
+		div.violent {		
+			background-color: violet;		
+		}
+
+		div.cyan {
+			background-color: cyan;
+		}		
+
+		div.azure {
+			background-color: azure;
+		}		
+
+		div.purple {
+			background-color: purple;
+		}		
+
+		div.antiquewhite {
+			background-color: antiquewhite;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="contents">
+			<div class="red">1</div>
+			<div class="orange">2</div>
+			<div class="yellow">3</div>
+			<div class="green">4</div>
+			<div class="blue">5</div>
+			<div class="indigo">6</div>
+			<div class="violent">7</div>
+			<div class="cyan">8</div>
+			<div class="azure">9</div>
+			<div class="purple">10</div>
+			<div class="antiquewhite">11</div>
+		</div>
+
+		<div class="contents-2">
+			<div class="red"></div>
+			<div class="orange"></div>
+			<div class="yellow"></div>
+			<div class="green"></div>
+			<div class="blue"></div>
+			<div class="indigo"></div>
+			<div class="violent"></div>
+			<div class="cyan"></div>
+			<div class="azure"></div>
+			<div class="purple"></div>
+			<div class="antiquewhite"></div>
+		</div>
+	</div>
+</body>
+</html>

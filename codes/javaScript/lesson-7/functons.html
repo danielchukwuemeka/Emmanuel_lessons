@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function logMYDetails() {
+            var confirmDetails = confirm('Do you want to log your details to the console?');
+            if(confirmDetails) {
+                console.log("my name is emmanuel");
+            } else {
+                console.log('please i dont want to tell you my name');
+            }
+        }
+        
+        printName('emmanuel', 100);
+        //working with function that has parameters
+        function printName(name, age, level) {
+            // console.log('The student\'s is ' + name);
+            // console.log('my age is ' + age);
+            // console.log('my level is is ' + level + "level");
+
+            console.log(`My Name is ${name} \nMy Age is ${age} \nMy level is ${level} Level`);
+        }
+        
+
+
+        // function createNewStudent(showName, name) {
+        //     function showName() {
+        //         console.log('my name is ' + name);
+        //     }
+        // }
+
+        // createNewStudent()
+
+        //definig functions with the function expression 
+        // myCustomFunction();
+        let myCustomFunction = function customFunction() {
+            alert("hurray! you've recieved 30million dollars");
+        }
+
+        let consoleLog = {
+            log: function (logValue) {
+                console.Log(logValue);
+            }
+        }
+
+        consoleLog.log("my name is emma");
+    </script>
+
+    <div>
+        <button onclick="logMYDetails()">
+            call the logMYDetails function
+        </button>
+    </div>
+</body>
+</html>

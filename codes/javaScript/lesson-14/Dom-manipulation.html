@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .added_paragraph {
+            font-size: 20px;
+            color: orangered;
+            cursor: pointer;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .orange {
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="lorem">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima, enim autem? Ab a, eveniet saepe
+        similique
+        cupiditate earum. Rerum reprehenderit incidunt maxime quia fugiat et nostrum velit doloribus cupiditate?
+        Necessitatibus!
+    </p>
+
+    <p class="subtitle">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate rem, iure vero ratione numquam consectetur
+        dolorum recusandae quisquam blanditiis dicta! Deserunt nisi consectetur possimus dolor necessitatibus a
+        voluptas? Vitae, sapiente!
+    </p>
+    <p class="subtitle">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate rem, iure vero ratione numquam consectetur
+        dolorum recusandae quisquam blanditiis dicta! Deserunt nisi consectetur possimus dolor necessitatibus a
+        voluptas? Vitae, sapiente!
+    </p>
+    <p class="subtitle">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate rem, iure vero ratione numquam consectetur
+        dolorum recusandae quisquam blanditiis dicta! Deserunt nisi consectetur possimus dolor necessitatibus a
+        voluptas? Vitae, sapiente!
+    </p>
+    <p class="subtitle">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate rem, iure vero ratione numquam consectetur
+        dolorum recusandae quisquam blanditiis dicta! Deserunt nisi consectetur possimus dolor necessitatibus a
+        voluptas? Vitae, sapiente!
+    </p>
+    <p class="title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia dicta, veniam repudiandae porro,
+        laboriosam error, itaque laborum beatae nesciunt deserunt vitae modi omnis dolores repellat unde saepe quae
+        illo. Magni.</p>
+    <p class="title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia dicta, veniam repudiandae porro,
+        laboriosam error, itaque laborum beatae nesciunt deserunt vitae modi omnis dolores repellat unde saepe quae
+        illo. Magni.</p>
+    <p class="title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia dicta, veniam repudiandae porro,
+        laboriosam error, itaque laborum beatae nesciunt deserunt vitae modi omnis dolores repellat unde saepe quae
+        illo. Magni.</p>
+    <p class="title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia dicta, veniam repudiandae porro,
+        laboriosam error, itaque laborum beatae nesciunt deserunt vitae modi omnis dolores repellat unde saepe quae
+        illo. Magni.</p>
+    <script>
+        let lorem = document.getElementById('lorem');
+        console.log(lorem);
+
+        let title = document.getElementsByClassName('title');
+        let subtitle = document.getElementsByClassName('subtitle');
+        let titleArray = Array.from(title);
+        console.log(titleArray);
+        console.log(subtitle);
+        console.log(title);
+
+        //using the document.query selector 
+        let querytitle = document.querySelector('.title');
+        console.log(querytitle);
+
+        //using the document.queryselectorall
+        let queryTitleAll = document.querySelectorAll('.title');
+        console.log(queryTitleAll);
+
+        //creating an element using javascript 
+        let dynamicP = document.createElement('p');
+        dynamicP.innerText = 'lorem ipsum';
+        dynamicP.classList.add('title');
+        dynamicP.classList.add('added_paragraph');
+        querytitle.before(dynamicP);
+
+        let dynamicB = document.createElement('button');
+        dynamicB.innerHTML = 'toggle lorem ipum';
+        dynamicB.style.cursor = 'pointer';
+        dynamicP.after(dynamicB);
+
+        dynamicP.addEventListener('click', function () {
+            dynamicP.remove();
+        });
+
+        dynamicB.addEventListener('click', function () {
+            dynamicP.classList.toggle('hidden');
+        });
+
+        let backgrounds = [
+            'orange',
+            'red',
+            'blue',
+            'cyan',
+            'green'
+        ]
+
+        let body = document.querySelector('body');
+        body.addEventListener('mouseover', function () {
+            let randomNumber = Math.floor(Math.random() * backgrounds.length);
+            console.log(randomNumber);
+            body.style.backgroundColor = backgrounds[randomNumber];
+        })
+    </script>
+</body>
+
+</html>

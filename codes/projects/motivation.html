@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>iPhone UI with Sunset Background</title>
+    <style>
+        body {
+            background: #F6D6AD url(./virginia-beach-pier-and-shoreline-acthng51ba7ndowu.jpg) no-repeat fixed center bottom;
+            background-size: cover;
+        }
+
+        .iphone {
+            width: 300px;
+            height: 600px;
+            background-color: #000;
+            border-radius: 30px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            border: 5px solid black;
+            box-shadow: 10px 10px 30px black;
+        }
+
+        .iphone::before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwallpapers.com%2Fsunset&psig=AOvVaw2mNTMuE8c_up4sG7DdEO1K&ust=1685011117502000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCPiu8obijf8CFQAAAAAdAAAAABAJ');
+            background-size: cover;
+            background-position: center;
+            border-radius: 30px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: -1;
+        }
+
+        .screen {
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8) url(./background.jpg) no-repeat fixed center center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-size: contain;
+        }
+
+        .quote-container {
+            text-align: center;
+            padding: 20px;
+            color: #FFF;
+            text-shadow: 2px 2px 10px black;
+            font-size: 20px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .button {
+            width: 80px;
+            height: 40px;
+            background-color: #333;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: #fff;
+            position: absolute;
+            bottom: 20px;
+            left: calc(50% - 40px);
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="iphone">
+        <div class="screen">
+            <div class="quote-container">
+                <p id="quote">Click the button to generate a motivational quote!</p>
+            </div>
+        </div>
+        <div class="button" onclick="generateQuote()">Display</div>
+    </div>
+
+    <script>
+        function generateQuote() {
+            const quotes = [
+                "Believe you can and you're halfway there. - Theodore Roosevelt",
+                "The future belongs to those who believe in the beauty of their dreams. - Eleanor Roosevelt",
+                "Success is not final, failure is not fatal: It is the courage to continue that counts. - Winston Churchill",
+                "Don't watch the clock; do what it does. Keep going. - Sam Levenson",
+                "The only limit to our realization of tomorrow will be our doubts of today. - Franklin D. Roosevelt",
+                "Believe in yourself, take on your challenges, dig deep within yourself to conquer fears. Never let anyone bring you down. You got this. - Chantal Sutherland",
+                "Your time is limited, don't waste it living someone else's life. - Steve Jobs",
+                "The only way to do great work is to love what you do. - Steve Jobs",
+                "You are never too old to set another goal or to dream a new dream. - C.S. Lewis",
+                "The road to success and the road to failure are almost exactly the same. The only difference is that the successful person keeps going. - Roy T. Bennett"
+            ];
+
+            const quoteElement = document.getElementById("quote");
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            quoteElement.textContent = quotes[randomIndex];
+        }
+    </script>
+</body>
+
+</html>

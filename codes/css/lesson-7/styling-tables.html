@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>styling tables</title>
+	<style type="text/css">
+		div.content table {
+			border: 2px solid black !important;
+			font-size: 30px;
+/*			padding: 20px;*/
+		}
+		table tr {
+			text-align: center;
+		}
+
+		table td, table th {
+			border-bottom: 1px solid black;
+			border-right: 1px solid black;
+			padding: 20px;
+		}
+
+		table td:last-child,
+		table th:last-child {
+			border-right: none;
+		}
+
+		tr:last-child td  {
+			border-bottom: none;
+		}
+
+		tr:nth-child(even) {
+			background-color: lightblue;
+		} 
+
+		tr:nth-child(odd) {
+			background-color: yellow;
+		} 
+
+		tr:nth-child(3n) {
+			background-color: red;
+		}
+
+		tr:nth-child(4) {
+			background-color: blueviolet;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="content">
+			<table>
+				<tr>
+					<th>Name</th>
+					<th>Reg Number</th>
+					<th>Department</th>
+				</tr>
+				<tr class="table-row">
+					<td>Emmaunel</td>
+					<td>001</td>
+					<td>sociology</td>
+				</tr>				
+
+				<tr class="table-row">
+					<td>chisom</td>
+					<td>002</td>
+					<td>botany</td>
+				</tr>				
+
+				<tr class="table-row">
+					<td>Adaeze</td>
+					<td>003</td>
+					<td>nursing</td>
+				</tr>				
+
+				<tr class="table-row">
+					<td>Goodluck</td>
+					<td>004</td>
+					<td>civil enginering</td>
+				</tr>
+
+				<tr>
+					<td>Daniel</td>
+					<td>005</td>
+					<td>midwife</td>
+				</tr>
+
+				<tr class="table-row">
+					<td>Goodluck</td>
+					<td>004</td>
+					<td>civil enginering</td>
+				</tr>		
+			</table>
+		</div>
+	</div>
+</body>
+</html>

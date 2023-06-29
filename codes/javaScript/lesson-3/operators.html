@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <script>
+            let maggi = 200;
+            let salt = 150;
+            let onga = 50;
+            let onions = 50 * 5;
+            let oil = 500;
+            let tomatoes = 300;
+            let crayfish = 100;
+            let rice = 1500 / 2;
+
+            let total = maggi + salt + onga + onions + oil + tomatoes + crayfish + rice;
+
+            let mainTotal = total - crayfish - onga;
+
+            console.log("Initial total was " + total);
+            console.log(`mainTotal is now ${mainTotal}`);
+
+            // The grouping operator 
+            let totalAmount = (30*10+2-4)/(6+10-200+100*2-3000+70-3+1);
+            console.log(totalAmount);
+            // alert(totalAmount)
+
+            // a program to calculate the area of a circle
+            const pi = 3.142;
+            let radius = 20;
+
+            let area = pi * (radius * radius);
+            console.log(area);
+
+            /* 
+            B = Bracket
+            O = of
+            D = Division 
+            M = Multiplication
+            A = addition 
+            S = Subtraction
+
+            B = Bracket 
+            M = Modulo
+            M = multiplication
+            D = Division 
+            A = addition 
+            S = Subtraction
+            */
+
+           let totalOranges = 17;
+           let numberOfPersons = 4;
+           let eachPersonsShare = totalOranges/numberOfPersons;
+           let remainingOranges = totalOranges % numberOfPersons;
+           
+            console.log(`Share gotten by each person ${eachPersonsShare} and the remainder after sharing the oranges is ${remainingOranges}`);
+
+            // let start = 1;
+            // let end = 50;
+            // let currentValue = 0;
+            // for(let i = start; i != end + 1; i = i++) {
+            //     if(i%2 == 0) {
+            //         currentValue = i;
+            //         console.log(currentValue);
+            //     }
+            // }
+
+
+            // comparisim operators
+            let emmaAge = 8;
+            let chimobiAge = "17";
+            if (emmaAge === chimobiAge) {
+                console.log(`The both of them are age mates`);
+            } else {
+                console.log('the both are not age mates')
+            }
+
+            if(emmaAge != 10 || emmaAge < 18){
+                console.log('Emma is still a tenager');
+            } else{
+                console.log('Emma is an adult');
+            }
+        </script>
+    </div>
+</body>
+</html>

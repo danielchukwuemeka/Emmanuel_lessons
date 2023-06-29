@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let currentBalance = 90000;
+        let user1 = {
+            f_name: 'Emmanuel',
+            l_name: 'Ikechukwu',
+            address: 'Nkaliki Rd',
+            StateOfOrigin: 'Anambra',
+            Dob: 14 - 06 - 2004,
+            accountType: 'student',
+            accountLimit: 200000,
+            gender: 'male',
+            withdraw: function (amount) {
+                console.log(`Your withdraw of ${amount} is being processed and you will get the Notification soon!`);
+            },
+            deposit(amount) {
+                console.log(`Your deposit of ${amount} has been recieved sucessfully, you will recieve a Notification soon!`);
+            },
+            occupation: 'yahoo boy',
+            nextOfKins: [
+                'chisom', 'victor', 'precious'
+            ],
+            [currentBalance]: 9000,
+        }
+        console.clear;
+        // console.log(user1);
+
+        // user1.f_name = 'daniel';
+
+        // for (key in user1) {
+        //     console.log(`${key}: ${user1[key]}`);
+        // }
+
+        // let user2 = user1.f_name = 'daniel';
+        // console.log(user2);
+        // console.log(typeof (user2));
+
+        user1.isAdmin = true;
+        for (key in user1) {
+            console.log(`${key}: ${user1[key]}`);
+        }
+        console.log(user1);
+
+        delete user1.nextOfKins;
+        console.log(user1);
+        user1.deposit();
+
+        const person = { name: "Emmanuel", occupation: "yahoo boy" };
+        const { firstName, akaOru } = person;
+        console.log(firstName);
+        console.log(akaOru);
+        console.log(person);
+
+    </script>
+</body>
+
+</html>

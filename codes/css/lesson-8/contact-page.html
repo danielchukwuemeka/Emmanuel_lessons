@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>contact page </title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body.container {
+			background-color: #eee;
+		}
+
+		nav.main-nav {
+/*			padding: 20px 50px;*/
+			background-color: #0096ff;
+			clear: fixed;
+			box-shadow: 0 5px 10px #aaa;
+		}
+
+		div.logo-container {
+			font-size: 30px;
+			color: #fff;
+			font-family: sans-serif;
+			text-transform: uppercase;
+			clear: fixed;
+		}
+
+		div.logo-container>p {
+			float: left;
+			margin-top: 20px;
+			padding-left: 30px;
+		}
+
+		ul.list-container {
+			text-align: right;
+		}
+
+		ul.list-container li.list-items {
+			list-style-type: none;
+			display: inline-block;
+			padding: 25px 50px;
+		}
+
+		ul.list-container li.list-items:hover {
+			border-bottom: 2px solid orange;
+			background-color: #00aaff;
+		}
+
+		.main-nav ul li a {
+			color: #fff;
+			font-size: 20px;
+			text-decoration: none;
+			font-family: sans-serif;
+		}
+
+		body main {
+			padding: 50px;
+			display: flex;
+		}
+
+		main section.contact-container,
+		main>aside{
+			background-color: #fff;
+			padding: 30px;
+		}
+
+		main section.contact-container {
+			width: 70vw;
+			margin: 0 10px;
+		}
+
+		main>aside {
+			width: 30vw;
+		}
+
+		.contact-container form fieldset {
+			padding: 30px;
+			border-color: #fff;
+			border-radius: 10px;
+		}
+
+		.contact-container form fieldset legend {
+			font-size: 30px;
+			font-variant: small-caps;
+			font-family: sans-serif;
+			padding: 0 20px;
+		}
+
+		.contact-container form fieldset>div {
+			margin: 20px 0;
+			font-size: 20px;
+			font-family: sans-serif;
+		}
+
+		.contact-container form fieldset label {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		form fieldset>div input,
+		form fieldset>div textarea {
+			width: 100%;
+			padding: 5px;
+			font-size: 20px;
+			font-family: monospace;
+			background-color: #efefef;
+			border-width: 0;
+			box-shadow: 1px 1px 3px #999;
+		}
+
+		form fieldset>div textarea {
+			display: block;
+			height: 100px;
+		}
+
+		form fieldset>div button {
+			padding: 10px;
+			border: none;
+			border-radius: 5px;
+			color: #fff;
+		}
+
+		form fieldset>div button:hover {
+			border: 1px solid #888;
+		}
+
+		form fieldset>div button.submit {
+			background-color: #00ff00;
+			color: #000;
+		}
+
+		form fieldset>div button.reset {
+			background-color: #ff0000;
+		}
+
+		footer {
+			background-color: #0096ff;
+			color: #fff;	
+			padding: 20px 50px;	
+			text-align: center;	
+		}
+	</style>
+</head>
+<body class="container">
+	<div class="content">
+		<header >
+			<nav class="main-nav">
+				<div class="logo-container">
+					<p>Emma's Hub</p>
+				</div>
+				<ul class="list-container">
+					<li class="list-items"><a href="#0">Home</a></li>
+					<li class="list-items"><a href="#0">About</a></li>
+					<li class="list-items"><a href="#0">Blog</a></li>
+					<li class="list-items"><a href="#0">Contact</a></li>
+				</ul>			
+			</nav>
+		</header>
+
+		<main>
+			<section class="contact-container">
+				<div class="contact-contents">
+					<form class="contact-form" method="post" action="">
+						<fieldset>
+							<legend>Contact Form</legend>
+							<div>
+								<label for="fullname">Full Name</label>
+								<input id="fullname" name="fullname" placeholder="Full name" required>
+							</div>						
+
+							<div>
+								<label for="email">Email Address</label>
+								<input id="email" name="email" placeholder="Email" required>
+							</div>						
+
+							<div>
+								<label for="subject">Subject</label>
+								<input id="subject" name="subject" placeholder="subject" required>
+							</div>						
+
+							<div>
+								<label for="message">Message</label>
+								<textarea id="message" placeholder="Enter message"></textarea>
+							</div>						
+
+							<div>
+								<button class="submit" type="submit">Submit</button>
+								<button class="reset" type="reset">Reset</button>
+							</div>						
+						</fieldset>
+
+<!-- 						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</p> -->
+					</form>
+				</div>
+			</section>
+
+			<aside>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</p>
+			</aside>
+
+
+		</main>
+
+		<footer>
+			<p>&copy; All rights Reserved | Emma's Hub | 2023</p>
+		</footer>
+	</div>
+</body>
+</html>

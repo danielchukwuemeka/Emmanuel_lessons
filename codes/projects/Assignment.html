@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        div.container {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #999;
+        }
+
+        div.content {
+            outline: solid;
+            height: 600px;
+            width: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            border-radius: 20px;
+            background-color: #373658;
+        }
+
+        div.input1>input {
+            width: 400px;
+            height: 70px;
+            border-radius: 20px;
+            border: none;
+            text-align: center;
+            font-size: 19px;
+            font-family: 'Lucida Sans';
+        }
+
+        p {
+            font-size: 20px;
+            text-transform: uppercase;
+            color: rgb(233, 157, 15);
+        }
+
+        div>select {
+            font-size: 20px;
+            font-family: 'Trebuchet MS';
+        }
+
+        div>button {
+            padding: 5px 5px;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+            transition: 0.4s ease-in-out;
+        }
+
+        div>button:hover {
+            background-color: rgb(233, 157, 15);
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="input1">
+                <!-- <input type="text" name="display" id="display"> -->
+                <textarea name="display" id="display" cols="30" rows="5"></textarea>
+            </div>
+
+            <p>
+                Check the position of each state
+            </p>
+            <div>
+                <select name="state" id="states">
+                    <option value="abia">Abia</option>
+                    <option value="adamawa">Adamawa</option>
+                    <option value="AkwaIbom"></option>
+                    <option value="Anambra"></option>
+                    <option value="Bauchi"></option>
+                    <option value="Bayelsa"></option>
+                    <option value="Borno"></option>
+                    <option value="crossriver"></option>
+                    <option value="Delta"></option>
+                    <option value="Ebonyi"></option>
+                    <option value="Edo"></option>
+                    <option value="Ekiti"></option>
+                    <option value="Enugu"></option>
+                    <option value="Gombe"></option>
+                    <option value="Imo"></option>
+                    <option value="Jigawa"></option>
+                    <option value="Kaduna"></option>
+                    <option value="Kano"></option>
+                    <option value="Katsina"></option>
+                    <option value="kebbi"></option>
+                    <option value="Kogi"></option>
+                    <option value="Kwara"></option>
+                    <option value="Lagos"></option>
+                    <option value="Nasarawa"></option>
+                    <option value="Niger"></option>
+                    <option value="Ogun"></option>
+                    <option value="Ondo"></option>
+                    <option value="Osun"></option>
+                    <option value="Oyo"></option>
+                    <option value="Plateau"></option>
+                    <option value="rivers"></option>
+                    <option value="Sokoto">Sokoto</option>
+                    <option value="Taraba">Taraba</option>
+                    <option value="Yobe">Yobe</option>
+                    <option value="Zamfara">Zamfara</option>
+                </select>
+                <button type="button" id="search">Search</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function displaySelectedState() {
+            let states = document.getElementById('states');
+            // getting the index of the selected item 
+            let index = states.selectedIndex;
+            //getting the value of the selected item
+            let selectedIndex = states.options[states.selectedIndex].value;
+            console.log(selectedIndex);
+            // getting the input to display the option
+            let displayScreen = document.getElementById('display');
+            let displayValue = `The state you selected is ${selectedIndex} and it is the ${index + 1} state`;
+            displayScreen.innerHTML = displayValue;
+        }
+
+        let searchButton = document.getElementById('search');
+        searchButton.addEventListener('click', displaySelectedState);
+        // displaySelectedState();
+    </script>
+</body>
+
+</html>

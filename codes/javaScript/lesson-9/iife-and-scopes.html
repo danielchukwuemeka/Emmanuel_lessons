@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        (function() {
+            console.log('congratulations! your page has finally loaded sucessfully.')
+        })();
+
+        // function scope 
+        let myName = 'emmanuel';
+        console.log('before calling the function');
+        console.log(myName);
+        function declareName() {
+            let myName = 'daniel'
+            console.log(myName + ' this is the value of myName after calling the functon');
+        }
+    
+        declareName();
+
+        // console.log(myNameUpdate)
+
+        console.log(myName);
+
+        //using default parameters
+        function greet(name, message, time = 'Good day') {
+            console.log(time + name + message);
+        }
+
+        greet(' Emmanuel ', ' how are you doing today?')
+    </script>
+</body>
+</html>
